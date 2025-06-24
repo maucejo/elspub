@@ -28,11 +28,11 @@
 
 = About
 
-The #package[Elsevier] package is designed to closely resemble the #LaTeX class used by Elsevier for article formatting, which is not publicly available. It is not intended for submission, but rather to help authors prepare articles that resemble the final published version. It mainly serves as a proof of concept, demonstrating that Typst is a viable option for academic writing and scientific publishing.
+The #package[elsevier] package is designed to closely resemble the #LaTeX class used by Elsevier for article formatting, which is not publicly available. It is not intended for submission, but rather to help authors prepare articles that resemble the final published version. It mainly serves as a proof of concept, demonstrating that Typst is a viable option for academic writing and scientific publishing.
 
 This template has been initiated by James R swift (#github-user("jamesrswift")) and finalized by Mathieu Aucejo (#github-user("maucejo")). However, it is still in development and may not be fully compatible with all Elsevier journals.
 
-This manual provides an overview of the features of the #package[Elsevier] template and how to use it.
+This manual provides an overview of the features of the #package[elsevier] template and how to use it.
 
 #warning-alert[The template is provided as is by the Typst community and is not affiliated with Elsevier.]
 
@@ -247,4 +247,6 @@ The #package[elsevier] template is still in development and may not be fully com
 
 - [ ] Add more journals dictionaries
 #info-alert[If you want to add a journal dictionary, feel free to submit a pull request on the Github repository of the template, (#link-repo("maucejo/elsevier")).]
+
+- [ ] Add more journal-specific styles to the template
 
