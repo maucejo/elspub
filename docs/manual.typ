@@ -32,6 +32,10 @@ The #package[elsevier] package is designed to closely resemble the #LaTeX class 
 
 This template has been initiated by James R swift (#github-user("jamesrswift")) and finalized by Mathieu Aucejo (#github-user("maucejo")). However, it is still in development and may not be fully compatible with all Elsevier journals.
 
+The template uses the following fonts to conform to the Elsevier style:
+- #link("https://fonts.google.com/specimen/Charis+SIL")[Charis SIL] for the main text
+- #link("https://www.stixfonts.org/")[STIX Two Math] for maths
+
 This manual provides an overview of the features of the #package[elsevier] template and how to use it.
 
 #warning-alert[The template is provided as is by the Typst community and is not affiliated with Elsevier.]

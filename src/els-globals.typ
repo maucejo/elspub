@@ -2,7 +2,7 @@
 #let textfont = ("Charis SIL", "Libertinus", "New Computer Modern")
 
 // Math font
-#let mathfont = ("STIX Two Math", "New Computer Modern Math")
+#let mathfont = ("STIX Two Math", "Libertinus Math", "New Computer Modern Math")
 
 // Licence information
 #let cc-by = (
