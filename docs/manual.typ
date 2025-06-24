@@ -203,6 +203,7 @@ After importing #package[Elsevier], you have to initialize the template by a sho
 ]
 ]
 
+#pagebreak()
 == Additional features
 
 The #package[elsevier] template provides additional features to help you format your document properly.
