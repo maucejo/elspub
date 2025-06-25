@@ -6,6 +6,7 @@ license = "MIT"
 description = "Elsevier article template for Typst"
 entrypoint = "src/elsevier.typ"
 categories = ["report"]
+keywords = ["elsevier", "article", "template"]
 repository = "https://github.com/maucejo/elsevier"
 
 [template]
