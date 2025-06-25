@@ -17,7 +17,7 @@
   ),
   license: "MIT",
   description: "Elsevier article template for Typst",
-  repository: "https://github.com/maucejo/elsevier",
+  repository: "https://github.com/maucejo/elsevier-replica",
 
   title: "Elsevier-replica Template",
   date: datetime.today(),
