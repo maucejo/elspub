@@ -5,7 +5,7 @@
 #import "els-journal.typ": *
 #import "els-environment.typ": *
 
-#let elsevier-replica(
+#let elspub(
   paper-type: [Article],
   journal: mssp,
   title: [],
@@ -66,7 +66,7 @@
     paper-type: paper-type
   )
 
-  v(0.3em)
+  v(0.5em)
 
   make-precis(
     keywords: keywords,

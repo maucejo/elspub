@@ -11,7 +11,7 @@
   row-gutter: 0.5em,
   align: (left+horizon, center, left),
   stroke: none,
-  table.hline(stroke: 0.15pt, end: 2),
+  table.hline(stroke: 0.25pt, end: 2),
   table.cell(colspan: 2)[],
   table.cell(rowspan: 2, inset: -1pt, journal-image),
   table.cell(
@@ -26,7 +26,7 @@
     header
   ),
   table.cell(inset: 2pt, colspan: 3)[],
-  table.hline(stroke: 3pt)
+  table.hline(stroke: 0.25pt)
 )
 
 #let make-precis(
@@ -62,7 +62,7 @@
     #par(justify: true, text(size: 7.2pt, abstract))
     #v(1em)
   ],
-  table.hline(stroke: 0.5pt),
+  table.hline(stroke: 0.25pt),
 )
 
 #let make-institution(key, value) = {
@@ -126,7 +126,7 @@
   v(0.75em)
   par(text(size: 9.6pt, paper-type))
   v(1.5em)
-  par(text(size: 13.4pt,title))
+  par(text(size: 13.4pt, title))
   v(1.5em)
   make-authors(authors)
   v(1.25em)

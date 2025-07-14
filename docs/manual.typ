@@ -5,21 +5,21 @@
 #show: checklist.with(fill: eastern.lighten(95%), stroke: eastern, radius: .2em)
 
 #let abstract = [
-   The #package[elsevier-replica] template is designed to mimic the final appearance of Elsevier journals. It is not intended for submission, but rather to help authors prepare articles that resemble the final published version. It mainly serves as a proof of concept, demonstrating that Typst is a viable option for academic writing and scientific publishing.
+   The #package[elspub] template is designed to mimic the final appearance of Elsevier journals. It is not intended for submission, but rather to help authors prepare articles that resemble the final published version. It mainly serves as a proof of concept, demonstrating that Typst is a viable option for academic writing and scientific publishing.
 ]
 
 #show: mantys(
-  name: "elsevier-replica.typ",
+  name: "elspub.typ",
   version: "0.1.0",
   authors: (
     "Mathieu Aucejo",
     "James R Swift"
   ),
   license: "MIT",
-  description: "Elsevier article template for Typst",
-  repository: "https://github.com/maucejo/elsevier-replica",
+  description: "Elsevier publishing template for Typst",
+  repository: "https://github.com/maucejo/elspub",
 
-  title: "Elsevier-replica Template",
+  title: "elspub Template",
   date: datetime.today(),
 
   abstract: abstract,
@@ -28,25 +28,26 @@
 
 = About
 
-The #package[elsevier] package is designed to closely resemble the #LaTeX class used by Elsevier for article formatting, which is not publicly available. It is not intended for submission, but rather to help authors prepare articles that resemble the final published version. It mainly serves as a proof of concept, demonstrating that Typst is a viable option for academic writing and scientific publishing.
+The #package[elspub] package is designed to closely resemble the #LaTeX class used by Elsevier for article formatting, which is not publicly available. It is not intended for submission, but rather to help authors prepare articles that resemble the final published version. It mainly serves as a proof of concept, demonstrating that Typst is a viable option for academic writing and scientific publishing.
 
 This template has been initiated by James R swift (#github-user("jamesrswift")) and finalized by Mathieu Aucejo (#github-user("maucejo")). However, it is still in development and may not be fully compatible with all Elsevier journals.
 
 The template uses the following fonts to conform to the Elsevier style:
 - #link("https://fonts.google.com/specimen/Charis+SIL")[Charis SIL] for the main text
 - #link("https://www.stixfonts.org/")[STIX Two Math] for maths
+- #link("https://fonts.google.com/specimen/Roboto")[Roboto] for the journal homepage
 
-This manual provides an overview of the features of the #package[elsevier] template and how to use it.
+This manual provides an overview of the features of the #package[elspub] template and how to use it.
 
 #warning-alert[The template is provided as is by the Typst community and is not affiliated with Elsevier.]
 
 = Usage
 
-== Using `elsevier-replica`
+== Using `elspub`
 
-To use the #package[elsevier-replica] template, you need to include the following line at the beginning of your `typ` file:
+To use the #package[elspub] template, you need to include the following line at the beginning of your `typ` file:
 #codesnippet[```typ
-#import "@preview/elsevier-replica:0.1.0": *
+#import "@preview/elspub:0.1.0": *
 ```
 ]
 
@@ -60,8 +61,8 @@ After importing #package[elsevier-replica], you have to initialize the template 
 ```
 ]
 
-#cmd[elsevier-replica] takes the following arguments:
-#command("elsevier-replica", ..args(
+#cmd[elspub] takes the following arguments:
+#command("elspub", ..args(
   paper-type: [Article],
   journal: "mssp",
   title: [],
@@ -210,7 +211,7 @@ After importing #package[elsevier-replica], you have to initialize the template 
 #pagebreak()
 == Additional features
 
-The #package[elsevier-replica] template provides additional features to help you format your document properly.
+The #package[elspub] template provides additional features to help you format your document properly.
 
 === Appendix
 
@@ -227,7 +228,7 @@ To activate the appendix environment, all you have to do is to place the followi
 
 === Subfigures
 
-Subfigures are not built-in features of Typst, but the #package[elsevier-replica] template provides a way to handle them. It is based on the #package[subpar] package that allows you to create subfigures and properly reference them.
+Subfigures are not built-in features of Typst, but the #package[elspub] template provides a way to handle them. It is based on the #package[subpar] package that allows you to create subfigures and properly reference them.
 
 To create a subfigure, you can use the following syntax:
 
@@ -247,11 +248,11 @@ To create a subfigure, you can use the following syntax:
 
 = Roadmap
 
-The #package[elsevier-replica] template is still in development and may not be fully compatible with all Elsevier journals. The following features are planned for future releases:
+The #package[elspub] template is still in development and may not be fully compatible with all Elsevier journals. The following features are planned for future releases:
 #v(1em)
 
 - [ ] Add more journals dictionaries
-#info-alert[If you want to add a journal dictionary, feel free to submit a pull request on the Github repository of the template, (#link-repo("maucejo/elsevier-replica")).]
+#info-alert[If you want to add a journal dictionary, feel free to submit a pull request on the Github repository of the template, (#link-repo("maucejo/elspub")).]
 
 - [ ] Add more journal-specific styles to the template
 
