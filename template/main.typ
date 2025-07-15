@@ -1,4 +1,4 @@
-#import "@preview/elspub:0.1.0": *
+#import "@preview/elspub:0.2.0": *
 
 #show: elspub.with(
   journal: newast,
