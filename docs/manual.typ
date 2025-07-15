@@ -32,11 +32,6 @@ The #package[elspub] package is designed to closely resemble the #LaTeX class us
 
 This template has been initiated by James R swift (#github-user("jamesrswift")) and finalized by Mathieu Aucejo (#github-user("maucejo")). However, it is still in development and may not be fully compatible with all Elsevier journals.
 
-The template uses the following fonts to conform to the Elsevier style:
-- #link("https://fonts.google.com/specimen/Charis+SIL")[Charis SIL] for the main text
-- #link("https://www.stixfonts.org/")[STIX Two Math] for maths
-- #link("https://fonts.google.com/specimen/Roboto")[Roboto] for the journal homepage
-
 This manual provides an overview of the features of the #package[elspub] template and how to use it.
 
 #warning-alert[The template is provided as is by the Typst community and is not affiliated with Elsevier.]
@@ -47,15 +42,15 @@ This manual provides an overview of the features of the #package[elspub] templat
 
 To use the #package[elspub] template, you need to include the following line at the beginning of your `typ` file:
 #codesnippet[```typ
-#import "@preview/elspub:0.1.0": *
+#import "@preview/elspub:0.2.0": *
 ```
 ]
 
 == Initializing the template
 
-After importing #package[elsevier-replica], you have to initialize the template by a show rule with the #cmd[elsevier-replica] command. This function takes an optional argument to specify the title of the document.
+After importing #package[elspub], you have to initialize the template by a show rule with the #cmd[elspub] command. This function takes an optional argument to specify the title of the document.
 #codesnippet[```typ
-#show: elsevier-replica.with(
+#show: elspub.with(
   ...
 )
 ```
@@ -84,17 +79,22 @@ After importing #package[elsevier-replica], you have to initialize the template 
     - `agee`: Agriculture, Ecosystems and Environment
     - `apacoust`: Applied Acoustics
     - `cas`: Computers and Structures
+    - `jfs`: Journal of Fluids and Structures
     - `jsv`: Journal of Sound and Vibration
     - `mssp`: Mechanical Systems and Signal Processing
     - `newast`: New Astronomy
     - `structures`: Structures
 
   You can also create your own journal dictionary by defining a dictionary with the following keys:
-  - `name`: Name of the journal
-  - `address`: URL of the journal
-  - `logo`: Logo of the journal (image)
-  - `numcol`: Number of columns in the journal (1 or 2)
-  - `foot-info`: Footer information (text)
+  - `name`: Name of the journal #dtypes(str, content)
+  - `address`: URL of the journal #dtypes(str, content)
+  - `logo`: Logo of the journal (image) #dtypes(image)
+  - `font`: Font information #dtype(dictionary)
+    - `text`: Font for the text #dtype(str)
+    - `math`: Font for the math #dtype(str)
+    - `homepage`: Font for the homepage link #dtype(str)
+  - `numcol`: Number of columns in the journal (1 or 2) #dtype(int)
+  - `foot-info`: Footer information #dtypes(str, content)
 
   #codesnippet[
     ```typ
@@ -103,6 +103,11 @@ After importing #package[elsevier-replica], you have to initialize the template 
         name: "Mechanical Systems and Signal Processing",
         address: "www.elsevier.com/locate/ymssp",
         logo: image("path-to-logo/mssp.jpg"),
+        font: (
+                text: "Charis SIL",
+                math: "STIX Two Math",
+                homepage: "Roboto",
+              ),
         numcol: 1,
         foot-info: [Elsevier Ltd. All rights reserved, including those for text and data mining, AI training, and similar technologies.]
       )

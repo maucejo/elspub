@@ -11,7 +11,7 @@
   row-gutter: 0.5em,
   align: (left+horizon, center, left),
   stroke: none,
-  table.hline(stroke: 0.25pt, end: 2),
+  table.hline(stroke: 0.5pt, end: 2),
   table.cell(colspan: 2)[],
   table.cell(rowspan: 2, inset: -1pt, journal-image),
   table.cell(
@@ -26,7 +26,7 @@
     header
   ),
   table.cell(inset: 2pt, colspan: 3)[],
-  table.hline(stroke: 0.25pt)
+  table.hline(stroke: 3pt)
 )
 
 #let make-precis(
@@ -40,16 +40,16 @@
   column-gutter: 2.5em,
   row-gutter: 0.25cm,
   stroke: none,
-  table.hline(stroke: 0.25pt),
+  table.hline(stroke: 0.5pt),
   v(1fr)+text(size: 8.5pt, tracking: 4pt, smallcaps[ARTICLE INFO]),
-  table.hline(end: 1, stroke: 0.25pt),
+  table.hline(end: 1, stroke: 0.5pt),
   v(1fr)+text(size: 8.5pt, tracking: 4pt, smallcaps[ABSTRACT]),
-  table.hline(start: 1, end: 2, stroke: 0.25pt),
+  table.hline(start: 1, end: 2, stroke: 0.5pt),
   text(size: 6.4pt)[
     #if extra-info != none {
       extra-info
       linebreak()
-      line(length: 100%, stroke: 0.25pt)
+      line(length: 100%, stroke: 0.5pt)
       v(-0.65em)
     }
     _Keywords:_\
@@ -62,7 +62,7 @@
     #par(justify: true, text(size: 7.2pt, abstract))
     #v(1em)
   ],
-  table.hline(stroke: 0.25pt),
+  table.hline(stroke: 0.5pt),
 )
 
 #let make-institution(key, value) = {

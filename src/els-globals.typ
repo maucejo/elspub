@@ -1,8 +1,8 @@
-// Text font
-#let textfont = ("Charis SIL", "Libertinus", "New Computer Modern")
-
-// Math font
-#let mathfont = ("STIX Two Math", "Libertinus Math", "New Computer Modern Math")
+#let default-font = (
+  text: "Charis SIL",
+  math: "STIX Two Math",
+  homepage: "Roboto",
+)
 
 // Licence information
 #let cc-by = (

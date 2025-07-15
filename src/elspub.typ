@@ -1,6 +1,6 @@
 #import "@preview/equate:0.3.2": *
 #import "els-globals.typ": *
-#import "els-layout.typ": *
+#import "els-cover.typ": *
 #import "els-globals.typ": *
 #import "els-journal.typ": *
 #import "els-environment.typ": *
@@ -16,20 +16,22 @@
   keywords: (),
   body,
 ) = {
+  let new-journal = mssp + journal
+
   // Set paper information
   let paper-information = paper-info-default + paper-info
 
   // Text
-  set text(size: 8pt, font: textfont)
+  set text(size: 8pt, font: new-journal.font.text)
 
   // Math
   show: equate.with(breakable: true, sub-numbering: true)
-  set math.equation(numbering: (..n) => text(font: textfont, numbering("(1a)", ..n)) , supplement: none)
+  set math.equation(numbering: (..n) => text(font: new-journal.font.text, numbering("(1a)", ..n)) , supplement: none)
 
   let pad-val = if journal.numcol == 1 {2em} else {0em}
   show math.equation.where(block: true): set align(left)
   show math.equation.where(block: true): pad.with(left: pad-val)
-  show math.equation: set text(font: mathfont)
+  show math.equation: set text(font: new-journal.font.math)
 
   // Links styling
   show link: set text(fill: rgb(33, 150,209))
@@ -45,18 +47,18 @@
   set page(
     paper: "a4",
     margin: (x: 1.5cm, top: 2cm),
-    header: make-header(authors, journal, paper-information),
-    footer: make-footer(paper-information, journal),
+    header: make-header(authors, new-journal, paper-information),
+    footer: make-footer(paper-information, new-journal),
   )
 
   top-bar({
-      text(size: 8pt)[Contents lists available at #link("https://"+journal.address, "ScienceDirect")]
+      text(size: 8pt)[Contents lists available at #link("https://"+new-journal.address, "ScienceDirect")]
       v(1fr)
-      text(size:13.9pt)[#journal.name]
+      text(size:13.9pt)[#new-journal.name]
       v(1fr)
-      text(size: 8pt, font: "Roboto")[journal homepage: #link("https://"+journal.address, strong(delta: 100, journal.address))]
+      text(size: 8pt, font: new-journal.font.homepage)[journal homepage: #link("https://"+new-journal.address, strong(delta: 100, new-journal.address))]
     },
-    journal-image: journal.logo,
+    journal-image: new-journal.logo,
   )
 
   make-title(
