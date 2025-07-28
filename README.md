@@ -1,15 +1,10 @@
 # Elsevier publishing template
 
-[![Generic badge](https://img.shields.io/badge/Version-0.2.0-cornflowerblue.svg)]()
+[![Generic badge](https://img.shields.io/badge/Version-0.2.1-cornflowerblue.svg)]()
 [![MIT License](https://img.shields.io/badge/License-MIT-forestgreen)](https://github.com/maucejo/elsearticle/blob/main/LICENSE)
 [![User Manual](https://img.shields.io/badge/doc-.pdf-mediumpurple)](https://github.com/maucejo/elspub/blob/main/docs/manual.pdf)
 
 The `elspub` package is designed to closely resemble the `LaTeX` class used by Elsevier for article formatting, which is not publicly available. It is not intended for submission, but rather to help authors prepare articles that resemble the final published version. It mainly serves as a proof of concept, demonstrating that Typst is a viable option for academic writing and scientific publishing.
-
-The template uses the following fonts to conform to the Elsevier style:
-- [`Charis SIL`](https://fonts.google.com/specimen/Charis+SIL) for the main text
-- [`STIX Two Math`](https://www.stixfonts.org/) for maths
-- [`Roboto`](https://fonts.google.com/specimen/Roboto) for the journal homepage
 
 ## Basic usage
 
@@ -18,7 +13,7 @@ This section provides the minimal amount of information to get started with the 
 To use the `elspub` template, you need to include the following line at the beginning of your `typ` file:
 
 ```typ
-#import "@preview/elspub:0.1.0": *
+#import "@preview/elspub:0.2.1": *
 ```
 
 ### Initializing the template

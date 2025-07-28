@@ -10,7 +10,7 @@
 
 #show: mantys(
   name: "elspub.typ",
-  version: "0.1.0",
+  version: "0.2.1",
   authors: (
     "Mathieu Aucejo",
     "James R Swift"
@@ -99,13 +99,13 @@ After importing #package[elspub], you have to initialize the template by a show 
   #codesnippet[
     ```typ
       // Example of a custom journal dictionary
-      #let mssp = (
-        name: "Mechanical Systems and Signal Processing",
-        address: "www.elsevier.com/locate/ymssp",
-        logo: image("path-to-logo/mssp.jpg"),
+      #let mwj = (
+        name: "My wonderful journal",
+        address: "www.elsevier.com/locate/mwj",
+        logo: image("path-to-logo/mwj.jpg"),
         font: (
                 text: "Charis SIL",
-                math: "STIX Two Math",
+                math: "XITS Math",
                 homepage: "Roboto",
               ),
         numcol: 1,

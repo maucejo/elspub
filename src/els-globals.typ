@@ -1,6 +1,6 @@
 #let default-font = (
   text: ("Charis SIL", "New Computer Modern"),
-  math: ("STIX Two Math", "New Computer Modern Math"),
+  math: ("XITS Math", "STIX Two Math","New Computer Modern Math"),
   homepage: ("Roboto", "New Computer Modern"),
 )
 
