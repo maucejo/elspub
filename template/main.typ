@@ -1,4 +1,4 @@
-#import "@preview/elspub:0.2.0": *
+#import "@preview/elspub:0.2.1": *
 // #import "../src/elspub.typ": *
 
 #show: elspub.with(

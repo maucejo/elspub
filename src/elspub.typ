@@ -133,5 +133,12 @@
   show bibliography: set heading(numbering: none)
   show bibliography: set text(size: 7.2pt)
 
+  // Custom citations
+  show cite: it => {
+    show regex("\[|\]"): it => text(fill: black)[#it]
+    it
+  }
+
+  // Main body
   show: columns(journal.numcol, body)
 }
