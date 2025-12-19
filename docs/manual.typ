@@ -114,8 +114,20 @@ After importing #package[elspub], you have to initialize the template by a show 
     ```
   ]
 
-  #warning-alert[The name of the journal must be given without the quote marks, since it is the name of a dictionary.]
+  #warning-alert[The name of the journal must be given without the quote marks, since it is the name of a dictionary.
+
+  In addition, to make the implementation generic, the last line of the template is like:
+  #codesnippet[
+    ```typc
+    show: column(numcol, body)
+    ```
+  ]
+
+  This means that a page break must be inserted using the #cmd[colbreak] command and not #cmd[pagebreak].
+  ]
 ]
+
+#colbreak()
 
 #argument("title", default: [], types: (str, content))[
   Title of the article. If not provided, the title will be empty.
