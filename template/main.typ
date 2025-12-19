@@ -1,8 +1,7 @@
-#import "@preview/elspub:0.2.1": *
-// #import "../src/elspub.typ": *
+#import "@preview/elspub:0.2.2": *
 
 #show: elspub.with(
-  journal: newast,
+  journal: mssp,
   paper-type: none,
   title: [Foundations of geometric thought: From practical measurement to mathematical harmony],
   keywords: (

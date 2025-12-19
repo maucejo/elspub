@@ -49,40 +49,34 @@
     margin: (x: 1.5cm, top: 2cm),
     header: make-header(authors, new-journal, paper-information),
     footer: make-footer(paper-information, new-journal),
-    columns: journal.numcol
   )
 
-  place(top, scope: "parent", float: true, clearance: 2.2em, {
-    top-bar({
-        text(size: 8pt)[Contents lists available at #link("https://"+new-journal.address, "ScienceDirect")]
-        v(1fr)
-        text(size:13.9pt)[#new-journal.name]
-        v(1fr)
-        text(size: 8pt, font: new-journal.font.homepage)[journal homepage: #link("https://"+new-journal.address, strong(delta: 100, new-journal.address))]
-      },
-      journal-image: new-journal.logo,
-    )
+  top-bar({
+      text(size: 8pt)[Contents lists available at #link("https://"+new-journal.address, "ScienceDirect")]
+      v(1fr)
+      text(size:13.9pt)[#new-journal.name]
+      v(1fr)
+      text(size: 8pt, font: new-journal.font.homepage)[journal homepage: #link("https://"+new-journal.address, strong(delta: 100, new-journal.address))]
+    },
+    journal-image: new-journal.logo,
+  )
 
-    make-title(
-      title: title,
-      authors: authors,
-      institutions: institutions,
-      paper-type: paper-type
-    )
+  make-title(
+    title: title,
+    authors: authors,
+    institutions: institutions,
+    paper-type: paper-type
+  )
 
-    v(0.5em)
+  v(0.5em)
 
-    make-precis(
-      keywords: keywords,
-      abstract: abstract,
-      extra-info: paper-info.extra-info
-    )
-    })
+  make-precis(
+    keywords: keywords,
+    abstract: abstract,
+    extra-info: paper-info.extra-info
+  )
 
-  let els-float = if journal.numcol == 1 {false} else {true}
-  place(bottom, scope: "column", float: els-float, {
-    make-corresponding-author(authors)
-  })
+  make-corresponding-author(authors)
 
   show heading: set block(spacing: 1.25em, above: 2em)
   set heading(numbering: "1.1.1.")
@@ -104,6 +98,8 @@
     it
     v(-0.6em)
   }
+
+  v(1em)
 
   set par(justify: true, first-line-indent: (amount: 1.5em, all:true))
 
@@ -144,5 +140,5 @@
   }
 
   // Main body
-  show: body
+  show: columns(journal.numcol, body)
 }
