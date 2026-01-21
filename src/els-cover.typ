@@ -198,13 +198,13 @@
     place(
       float: true,
       bottom,
-      dy: -2em,
+      dy: -1.5em,
       {
         v(0.5em)
         line(length: 4em, stroke: 0.25pt)
         v(-0.75em)
         text(size: 6.4pt)[
-          #h(0.2cm)#super[#text(size: 5pt)[#sym.ast]]#h(0.1cm);Corresponding author.\
+          #h(0.2cm)#super[#text(size: 9pt)[#sym.ast]]#h(0.1cm);Corresponding author.\
           #h(0.4cm)_E-mail address:_ #if (author.at("email", default: none)) != none {link("mailto:"+author.email, author.email)} else {text("No email provided")} (#author.name).
         ]
       }

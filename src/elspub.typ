@@ -77,12 +77,9 @@
       abstract: abstract,
       extra-info: paper-info.extra-info
     )
-    })
-
-  let els-float = if journal.numcol == 1 {false} else {true}
-  place(bottom, scope: "column", float: els-float, {
-    make-corresponding-author(authors)
   })
+
+  make-corresponding-author(authors)
 
   show heading: set block(spacing: 1.25em, above: 2em)
   set heading(numbering: "1.1.1.")
