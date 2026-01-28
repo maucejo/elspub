@@ -1,8 +1,5 @@
 #import "@preview/mantys:1.0.2": *
 #import "@preview/swank-tex:0.1.0": LaTeX
-#import "@preview/cheq:0.2.2": *
-
-#show: checklist.with(fill: eastern.lighten(95%), stroke: eastern, radius: .2em)
 
 #let abstract = [
    The #package[elspub] template is designed to mimic the final appearance of Elsevier journals. It is not intended for submission, but rather to help authors prepare articles that resemble the final published version. It mainly serves as a proof of concept, demonstrating that Typst is a viable option for academic writing and scientific publishing.
@@ -10,7 +7,7 @@
 
 #show: mantys(
   name: "elspub.typ",
-  version: "1.0.0",
+  version: "1.1.0",
   authors: (
     "Mathieu Aucejo",
     "James R Swift"
@@ -63,7 +60,7 @@ After importing #package[elspub], you have to initialize the template by a show 
   title: [],
   abstract: [],
   authors: (),
-  institutions: (),
+  affiliations: (),
   paper-info: "paper-info-default",
   keywords: (),
   [body])
@@ -130,7 +127,7 @@ After importing #package[elspub], you have to initialize the template by a show 
 #argument("authors", default: (), types: array)[
   Array containing the list of authors of the article. Each author is defined as a dictionary with the following keys:
   - `name`: Name of the author (required) #dtypes(str, content)
-  - `institutions`: List of institutions of the author (required) #dtype(array)
+  - `affiliations`: List of affiliations of the author (required) #dtype(array)
   - `corresponding`: Corresponding author (optional, default: false) #dtype(bool)
   - `orcid`: ORCID of the author (optional) #dtypes(str, content)
   - `email`: Email of the corresponding author (optional) #dtypes(str, content)
@@ -138,28 +135,28 @@ After importing #package[elspub], you have to initialize the template by a show 
   #codesnippet[
     ```typc
     authors: (
-      (name: [S. Pythagoras], institutions: ("a",), corresponding: true, orcid: "0000-0001-2345-6789", email:"s.pythagoras@croton.edu"),
-      (name: [M. Thales], institutions: ("b", ))
+      (name: [S. Pythagoras], affiliations: ("a",), corresponding: true, orcid: "0000-0001-2345-6789", email:"s.pythagoras@croton.edu"),
+      (name: [M. Thales], affiliations: ("b", ))
     )
     ```
   ]
 ]
 
-#argument("institutions", default: (), types: dictionary)[
-  Dictionary containing the list of institutions of the article. Each institution is defined as a key-value pair, where the key is a #dtype(str) representing the institution ID and the value is a #dtypes(str, content) giving the name and the address of the institution.
+#argument("affiliations", default: (), types: dictionary)[
+  Dictionary containing the list of affiliations of the article. Each affiliation is defined as a key-value pair, where the key is a #dtype(str) representing the affiliation ID and the value is a #dtypes(str, content) giving the name and the address of the affiliation.
 
   #codesnippet[
     ```typc
-    institutions: (
+    affiliations: (
       "a": [School of Pythagoreans, Croton, Magna Graecia],
       "b": [Milesian School of Natural Philosophy, Miletus, Ionia]
     )
     ```
   ]
 
-  #info-alert[If the paper has only one author, `institutions`must be:
+  #info-alert[If the paper has only one author, `affiliations` must be:
     - `("",)` in the `authors` #dtype(array) of #dtype(dictionary)
-    - `("": [Institution name])` in the `institutions` #dtype(dictionary)
+    - `("": [Affiliation name])` in the `affiliations` #dtype(dictionary)
     to conform to the Elsevier template requirements.
   ]
 ]
@@ -253,13 +250,8 @@ To create a subfigure, you can use the following syntax:
 
 #info-alert[The #cmd("subfigure") function is a wrapper around the #cmd[subpar.grid] function. The numbering is adapted to the context of the document (normal section or appendix).]
 
-= Roadmap
+= Dependencies
 
-The #package[elspub] template is still in development and may not be fully compatible with all Elsevier journals. The following features are planned for future releases:
-#v(1em)
-
-- [ ] Add more journals dictionaries
-#info-alert[If you want to add a journal dictionary, feel free to submit a pull request on the Github repository of the template, (#link-repo("maucejo/elspub")).]
-
-- [ ] Add more journal-specific styles to the template
-
+The #package[elspub] template depends on the following packages:
+ - `equate:0.3.2`: For advanced equation handling.
+ - `subpar:0.2.2`: For subfigure handling.

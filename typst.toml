@@ -1,6 +1,6 @@
 [package]
 name = "elspub"
-version = "1.0.0"
+version = "1.1.0"
 authors = ["Mathieu Aucejo", "James R Swift"]
 license = "MIT"
 description = "Elsevier article template for Typst"

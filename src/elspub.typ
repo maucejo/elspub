@@ -11,7 +11,7 @@
   title: [],
   abstract: [],
   authors: (),
-  institutions: (),
+  affiliations: (),
   paper-info: paper-info-default,
   keywords: (),
   body,
@@ -66,7 +66,7 @@
     make-title(
       title: title,
       authors: authors,
-      institutions: institutions,
+      affiliations: affiliations,
       paper-type: paper-type
     )
 

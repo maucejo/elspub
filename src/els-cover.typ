@@ -74,9 +74,9 @@
   text(style:"italic", value)
 }
 
-#let make-institutions(institutions) = par({
+#let make-institutions(affiliations) = par({
   set text(size: 6.4pt)
-  for (key, value) in institutions{
+  for (key, value) in affiliations{
     make-institution(key, value)
     linebreak()
   }
@@ -85,10 +85,10 @@
 #let make-author(author) = box({
   author.name
 
-  let auth-institution = if author.institutions.at(0) == "" {
+  let auth-affiliation = if author.affiliations.at(0) == "" {
     none
   } else {
-    author.institutions.map((key)=>{
+    author.affiliations.map((key)=>{
       text(fill: rgb(0,0,102), link(label("institution."+key), key))
     })
   }
@@ -100,13 +100,13 @@
   }
 
   sym.space.thin
-  if auth-institution == none {
+  if auth-affiliation == none {
     super({
       auth-rest.join([ ])
     })
   } else {
     super({
-      (auth-institution + auth-rest).join([,])
+      (auth-affiliation + auth-rest).join([,])
     })
   }
 })
@@ -120,7 +120,7 @@
   paper-type: [Document heading],
   title: [Full length journal article adapted and reset according to the typesetting specifications for this model],
   authors: (),
-  institutions: ()
+  affiliations: ()
 ) = {
   show par: block.with(below: 0em)
   v(0.75em)
@@ -130,7 +130,7 @@
   v(1.5em)
   make-authors(authors)
   v(1.25em)
-  make-institutions(institutions)
+  make-institutions(affiliations)
   v(0.75em)
 }
 

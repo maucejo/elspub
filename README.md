@@ -1,6 +1,6 @@
 # Elsevier publishing template
 
-[![Generic badge](https://img.shields.io/badge/Version-1.0.0-cornflowerblue.svg)]()
+[![Generic badge](https://img.shields.io/badge/Version-1.1.0-cornflowerblue.svg)]()
 [![MIT License](https://img.shields.io/badge/License-MIT-forestgreen)](https://github.com/maucejo/elsearticle/blob/main/LICENSE)
 [![User Manual](https://img.shields.io/badge/doc-.pdf-mediumpurple)](https://github.com/maucejo/elspub/blob/main/docs/manual.pdf)
 
@@ -25,7 +25,7 @@ After importing `elspub`, you have to initialize the template by a show rule wit
 * `title`: Title of the paper.
 * `abstract`: Abstract of the paper.
 * `authors`: List of the authors of the paper.
-* `institutions`: List of the institutions of the paper.
+* `affiliations`: List of the affiliations of the paper.
 * `paper-info`: Dictionary containing the paper information (e.g. year, volume, ...).
 * `keywords`: List of keywords of the paper.
 
@@ -56,12 +56,6 @@ Subfigures are not built-in features of Typst, but the `elspub` template provide
     label: <fig>
   )
 ```
-
-## Roadmap
-
-- [ ] Add more journals dictionaries
-- [ ] Add more journal-specific styles to the template
-
 
 ## License
 MIT licensed

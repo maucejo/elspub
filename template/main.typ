@@ -11,10 +11,10 @@
     "Template",
   ),
   authors: (
-    (name: [S. Pythagoras], institutions: ("a",), corresponding: true, orcid: "0000-0001-2345-6789", email:"s.pythagoras@croton.edu"),
-    (name: [M. Thales], institutions: ("b", )),
+    (name: [S. Pythagoras], affiliations: ("a",), corresponding: true, orcid: "0000-0001-2345-6789", email:"s.pythagoras@croton.edu"),
+    (name: [M. Thales], affiliations: ("b", )),
   ),
-  institutions: (
+  affiliations: (
     "a": [School of Pythagoreans, Croton, Magna Graecia],
     "b": [Milesian School of Natural Philosophy, Miletus, Ionia],
   ),
