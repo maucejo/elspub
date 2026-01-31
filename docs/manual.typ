@@ -7,7 +7,7 @@
 
 #show: mantys(
   name: "elspub.typ",
-  version: "1.1.0",
+  version: "1.0.0",
   authors: (
     "Mathieu Aucejo",
     "James R Swift"
