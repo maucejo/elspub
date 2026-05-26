@@ -1,6 +1,6 @@
 # Elsevier publishing template
 
-[![Generic badge](https://img.shields.io/badge/Version-1.0.0-cornflowerblue.svg)]()
+[![Generic badge](https://img.shields.io/badge/Version-1.0.1-cornflowerblue.svg)]()
 [![MIT License](https://img.shields.io/badge/License-MIT-forestgreen)](https://github.com/maucejo/elsearticle/blob/main/LICENSE)
 [![User Manual](https://img.shields.io/badge/doc-.pdf-mediumpurple)](https://github.com/maucejo/elspub/blob/main/docs/manual.pdf)
 
@@ -13,7 +13,7 @@ This section provides the minimal amount of information to get started with the 
 To use the `elspub` template, you need to include the following line at the beginning of your `typ` file:
 
 ```typ
-#import "@preview/elspub:1.0.0": *
+#import "@preview/elspub:1.0.1": *
 ```
 
 ### Initializing the template
@@ -60,4 +60,4 @@ Subfigures are not built-in features of Typst, but the `elspub` template provide
 ## License
 MIT licensed
 
-Copyright (C) 2025 Mathieu AUCEJO (maucejo) and James R Swift (jamesrswift)
+Copyright (C) 2026 Mathieu AUCEJO (maucejo) and James R Swift (jamesrswift)

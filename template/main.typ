@@ -1,5 +1,5 @@
-// #import "@preview/elspub:1.0.0": *
-#import "../src/elspub.typ": *
+#import "@preview/elspub:1.0.1": *
+// #import "../src/elspub.typ": *
 
 #show: elspub.with(
   journal: mssp,
