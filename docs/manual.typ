@@ -7,7 +7,7 @@
 
 #show: mantys(
   name: "elspub.typ",
-  version: "1.0.1",
+  version: "1.0.2",
   authors: (
     "Mathieu Aucejo",
     "James R Swift"
@@ -39,7 +39,7 @@ This manual provides an overview of the features of the #package[elspub] templat
 
 To use the #package[elspub] template, you need to include the following line at the beginning of your `typ` file:
 #codesnippet[```typ
-#import "@preview/elspub:1.0.1": *
+#import "@preview/elspub:1.0.2": *
 ```
 ]
 
